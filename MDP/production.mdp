@@ -1,0 +1,36 @@
+integrator              = md
+dt                      = 0.002
+nsteps                  = 500000
+nstenergy               = 500
+nstlog                  = 500
+nstxout-compressed      = 500
+compressed-x-grps        = system
+energygrps               = system
+;
+cutoff-scheme           = Verlet
+nstlist                 = 20
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw_switch             = 0.8
+rvdw                    = 0.9
+rcoulomb                = 0.9
+rlist                   = 0.9
+coulombtype             = pme
+;
+tcoupl                  = Nose-Hoover
+tc_grps                 = SYSTEM
+tau_t                   = 1.0
+ref_t                   = 300
+;
+constraints             = h-bonds
+constraint_algorithm    = LINCS
+continuation            = yes
+;
+nstcomm                 = 100
+comm_mode               = linear
+comm_grps               = SYSTEM
+;annealing       = periodic            ; single sequence of points for each T-coupling group
+;annealing_npoints       = 7          ; two points - start and end temperatures
+;annealing_time  =   0 400 600 800 1000 1200 1400
+;annealing_temp  =  300 400 500 600 500 400 300
+;

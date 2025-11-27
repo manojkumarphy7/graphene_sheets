@@ -1,0 +1,23 @@
+;define                  = -DREST_ON -DSTEP4_0
+integrator              = steep
+emtol                   = 100.0
+nsteps                  = 50000
+nstlist                 = 10
+cutoff-scheme           = Verlet
+rlist                   = 1.2
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw_switch             = 0.8
+rvdw                    = 0.9
+coulombtype             = pme
+rcoulomb                = 0.9
+constraints             = h-bonds
+constraint_algorithm    = LINCS
+
+nstxtcout               = 50
+nstvout                 = 50
+nstfout                 = 50
+nstcalcenergy           = 10
+nstenergy               = 10
+nstlog                  = 10
+
