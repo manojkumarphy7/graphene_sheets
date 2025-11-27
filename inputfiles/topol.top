@@ -1,0 +1,11 @@
+#include "forcefield.itp"
+#include "graphene.itp"
+#include "TIP3P.itp"
+[ system ]
+; Name
+Title in water
+
+[ molecules ]
+; Compound	#mols
+NMA   	           2
+SOL              4569
