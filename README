@@ -1,0 +1,21 @@
+This directory contains the full workflow for a molecular dynamics simulation of water confined between graphene sheets. The system was prepared by placing graphene layers in a periodic box and adding water molecules in the region between them. The setup allows the study of confined water behavior, surface interactions and changes in structure or diffusion near the graphene interface.
+
+Folder Structure
+
+inputfiles
+Contains the graphene coordinates, topology files, water configuration and any restraint or force field files used during system preparation.
+
+MDP
+Includes all parameter files used for energy minimization, NVT, NPT and production simulations. These files define the integrator, cutoffs, temperature and pressure control settings.
+
+1-em
+Stores the outputs of the energy minimization step. This stage removes steric clashes and relaxes the initial configuration before dynamics.
+
+2-equi
+Contains the NVT and NPT equilibration outputs. These runs stabilize the system temperature, pressure and box dimensions and prepare the system for production dynamics.
+
+3-prod
+Contains the final production simulation data, including trajectories, final structures, energy files and logs. These files are used for analyzing water behavior under confinement.
+
+analysis
+Reserved for any post-processing results, such as density profiles, diffusion calculations, structural order parameters or visualization files.
